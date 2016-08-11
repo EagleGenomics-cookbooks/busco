@@ -1,0 +1,7 @@
+name 'BUSCO'
+maintainer 'Eagle Genomics Ltd'
+maintainer_email 'chef@eaglegenomics.com'
+license 'apachev2'
+description 'Installs/Configures BUSCO'
+long_description 'Installs/Configures BUSCO'
+version '0.1.0'
