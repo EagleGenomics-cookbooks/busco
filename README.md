@@ -36,7 +36,7 @@ Attributes
 ==========
 See attributes/default.rb for default values.
 
-default['QUAST']['version']
+default['busco']['version']
 
 License and Authors
 ===================
