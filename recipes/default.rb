@@ -22,6 +22,8 @@ end
 
 include_recipe 'build-essential'
 
+include_recipe 'HMMER'
+
 include_recipe 'poise-python'
 
 python_runtime '3'
