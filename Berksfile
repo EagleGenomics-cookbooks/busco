@@ -5,5 +5,6 @@ def company_cookbook(name, version = '>= 0.0.0', options = {})
 end
 
 company_cookbook 'HMMER'
+company_cookbook 'blast'
 
 metadata

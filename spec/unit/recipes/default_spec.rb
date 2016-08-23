@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: BUSCO
+# Cookbook Name:: busco
 # Spec:: default
 #
 # Copyright 2016 Eagle Genomics Ltd
@@ -18,7 +18,7 @@
 
 require 'spec_helper'
 
-describe 'BUSCO::default' do
+describe 'busco::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new

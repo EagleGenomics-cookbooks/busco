@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: BUSCO
+# Cookbook Name:: busco
 # Recipe:: default
 #
 # Copyright 2016 Eagle Genomics Ltd
@@ -23,6 +23,8 @@ end
 include_recipe 'build-essential'
 
 include_recipe 'HMMER'
+
+include_recipe 'blast'
 
 include_recipe 'poise-python'
 
