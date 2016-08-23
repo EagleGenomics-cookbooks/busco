@@ -16,7 +16,7 @@ Notes
 
 Usage
 =====
-Simply include the recipe wherever you would like it installed, such as a run list (recipe[BUSCO]) or a cookbook (include_recipe 'BUSCO')
+Simply include the recipe wherever you would like it installed, such as a run list (recipe[busco]) or a cookbook (include_recipe 'busco')
 
 
 ## Testing
