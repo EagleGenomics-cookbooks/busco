@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package ['tar', 'zlib1g-dev'] do
+package ['tar', 'zlib1g-dev', 'emboss'] do
   action :install
 end
 
