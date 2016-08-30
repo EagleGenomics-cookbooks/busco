@@ -17,7 +17,7 @@ describe file('/usr/local/BUSCO_v1.22/sample_data') do
   it { should be_directory }
 end
 
-describe bash('. /etc/profile; cd /usr/local/BUSCO_v1.22/sample_data; python /usr/local/BUSCO_v1.22/BUSCO_v1.22.py -f -in target.fa -o SAMPLE -l example -m genome') do
+describe bash('. /etc/profile; cd /usr/local/BUSCO_v1.22/sample_data; python3 /usr/local/BUSCO_v1.22/BUSCO_v1.22.py -f -in target.fa -o SAMPLE -l example -m genome') do
   its(:exit_status) { should eq 0 }
 end
 
