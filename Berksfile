@@ -6,5 +6,6 @@ end
 
 company_cookbook 'HMMER'
 company_cookbook 'blast'
+company_cookbook 'augustus'
 
 metadata

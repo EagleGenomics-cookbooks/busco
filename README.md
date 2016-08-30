@@ -9,7 +9,7 @@ Requirements
 
 ## Platform:
 
-* Centos 7.2
+* Ubuntu 14.04
 
 Notes
 =====

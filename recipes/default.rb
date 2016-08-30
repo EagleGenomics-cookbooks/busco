@@ -16,16 +16,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package ['tar', 'zlib-devel'] do
+package ['tar', 'zlib1g-dev'] do
   action :install
 end
 
 include_recipe 'build-essential'
-
 include_recipe 'HMMER'
-
 include_recipe 'blast'
-
+include_recipe 'augustus'
 include_recipe 'poise-python'
 
 python_runtime '3'
@@ -40,9 +38,12 @@ execute 'un-tar busco' do
   not_if { ::File.exist?("#{node['busco']['dir']}/busco") }
 end
 
-# The executables are python scripts, let's not add in symlinks atm....
-# this symlinks every executable in the install subdirectory to the top of the directory tree
-# so that they are in the PATH
-# execute "find #{node['busco']['dir']} -maxdepth 1 -name '*.py' -executable -type f -exec ln -sf {} . \\;" do
-#   cwd node['busco']['install_path'] + '/bin'
-# end
+remote_file "#{Chef::Config[:file_cache_path]}/#{node['busco']['lineage_filename']}" do
+  source node['busco']['lineage_url']
+  action :create_if_missing
+end
+
+execute 'un-tar busco lineage' do
+  command "tar xzf #{Chef::Config[:file_cache_path]}/#{node['busco']['lineage_filename']} -C #{node['busco']['dir']}/"
+  not_if { ::File.exist?("#{node['busco']['dir']}/#{node['busco']['lineage_filename']}") }
+end
