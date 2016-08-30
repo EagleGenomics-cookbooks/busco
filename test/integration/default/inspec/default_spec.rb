@@ -29,13 +29,18 @@ end
 # the order can be diffferent so we will directlyt look for the correct results:
 describe file('/usr/local/BUSCO_v1.22/sample_data/run_SAMPLE/full_table_SAMPLE') do
   it { should exist }
-  its('content') { should match /BUSCO_10\sMissing/ }
+  its('content') { should match(/BUSCO_10\sMissing/) }
   its('content') { should match '234117]' }
 end
 
 describe file('/usr/local/BUSCO_v1.22/sample_data/run_SAMPLE/short_summary_SAMPLE') do
   it { should exist }
-  its('content') { should match /10\sTotal BUSCO groups searched/ }
-  its('content') { should match /2\sMissing BUSCOs/ }
+  its('content') { should match(/10\sTotal BUSCO groups searched/) }
+  its('content') { should match(/2\sMissing BUSCOs/) }
   its('content') { should match 'BUSCO was run in mode: genome' }
+end
+
+describe file('/usr/local/BUSCO_v1.22/sample_data/temp') do
+  it { should exist }
+  its('content') { should match 'keKtnirvCeeCghdheagvlCgtCYekvkaEtkemqekiqkeLgldpvekevivlYegekdeksdeflkgkrivElkkkrPswFsk' }
 end
