@@ -42,5 +42,5 @@ end
 
 describe file('/usr/local/BUSCO_v1.22/sample_data/temp') do
   it { should exist }
-  its('content') { should match 'keKtnirvCeeCghdheagvlCgtCYekvkaEtkemqekiqkeLgldpvekevivlYegekdeksdeflkgkrivElkkkrPswFsk' }
+  its('content') { should match 'Internal pipeline statistics summary' }
 end
