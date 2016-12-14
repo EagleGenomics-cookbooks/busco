@@ -6,7 +6,7 @@ description 'Installs/Configures BUSCO'
 long_description 'Installs/Configures BUSCO'
 source_url 'https://github.com/EagleGenomics-cookbooks/busco'
 issues_url 'https://github.com/EagleGenomics-cookbooks/busco/issues'
-version '1.0.0'
+version '1.0.1'
 
 depends 'build-essential'
 depends 'HMMER'
