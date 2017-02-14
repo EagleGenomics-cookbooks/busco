@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/EagleGenomics-cookbooks/busco.svg?branch=master)](https://travis-ci.org/EagleGenomics-cookbooks/busco)
+
 # BUSCO
  
 Description
